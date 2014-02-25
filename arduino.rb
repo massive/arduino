@@ -1,6 +1,8 @@
-require "serialport"
+require 'serialport'
 require 'json'
 require 'firebase'
+require 'dotenv'
+Dotenv.load
 
 firebase = Firebase.new(ENV['FIREBASE_URL'], ENV['SECRET_TOKEN'])
 
@@ -9,7 +11,7 @@ baud_rate = 9600
 data_bits = 8
 stop_bits = 1
 parity = SerialPort::NONE
-
+puts ENV['USB_SERIAL']
 sp = SerialPort.new(port_str, baud_rate, data_bits, stop_bits, parity)
 
 while true do

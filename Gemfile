@@ -1,2 +1,5 @@
+source 'https://rubygems.org'
 gem 'firebase'
 gem 'serialport'
+gem 'daemons'
+gem 'dotenv'
