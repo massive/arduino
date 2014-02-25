@@ -1,0 +1,2 @@
+gem 'firebase'
+gem 'serialport'
